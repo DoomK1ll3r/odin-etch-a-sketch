@@ -6,9 +6,17 @@ function createGrid (size = 0) {
     return;
   }
   else {
+
     for (let i = 0; i < size; i++) {
-      const aCell = document.createElement("div");
-      containerDiv.appendChild(aCell);
+      const aRow = document.createElement("div");
+      aRow.classList.add("row-div");
+      containerDiv.appendChild(aRow);
+
+      for (let j = 0; j < size; j++) {
+        const aCell = document.createElement("div");
+        aCell.classList.add("cell-div");
+        aRow.appendChild(aCell);
+      }
     }
   }
 }
