@@ -15,10 +15,15 @@ function createGrid (size = 0) {
       for (let j = 0; j < size; j++) {
         const aCell = document.createElement("div");
         aCell.classList.add("cell-div");
+        aCell.addEventListener("mouseover", () => changeColorCell(aCell));
         aRow.appendChild(aCell);
       }
     }
   }
 }
 
-createGrid(10);
+function changeColorCell (aCell) {
+  aCell.classList.add("colored-cell");
+}
+
+createGrid(50);
