@@ -24,7 +24,15 @@ function createGrid (size = 0) {
 }
 
 function changeColorCell (aCell) {
-  aCell.classList.add("colored-cell");
+  const redC = Math.floor(Math.random() * 256);
+  const greenC = Math.floor(Math.random() * 256);
+  const blueC = Math.floor(Math.random() * 256);
+
+  if(aCell.classList[1] != "colored-cell") {
+    aCell.classList.add("colored-cell");
+    aCell.style.backgroundColor = `rgb(${redC}, ${greenC}, ${blueC})`;
+  }
+
   aCell.style.opacity -= '-0.1';
 }
 

@@ -40,7 +40,6 @@ main {
 
 .colored-cell {
     opacity: 0;
-    background-color: black;
 }
 
 #set-grid {
