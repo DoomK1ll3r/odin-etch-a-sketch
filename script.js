@@ -41,5 +41,6 @@ function clear () {
 }
 
 setGridBtn.addEventListener("click",() => {
+  clear();
   createGrid(prompt("Enter the size per side of the grid"));
 });
