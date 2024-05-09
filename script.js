@@ -25,6 +25,7 @@ function createGrid (size = 0) {
 
 function changeColorCell (aCell) {
   aCell.classList.add("colored-cell");
+  aCell.style.opacity -= '-0.1';
 }
 
 function clear () {
@@ -32,6 +33,5 @@ function clear () {
 }
 
 setGridBtn.addEventListener("click",() => {
-  clear();
   createGrid(prompt("Enter the size per side of the grid"));
 });
