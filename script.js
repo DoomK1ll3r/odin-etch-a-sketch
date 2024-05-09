@@ -1,4 +1,5 @@
 const containerDiv = document.getElementById("container");
+const setGridBtn = document.getElementById("set-grid");
 
 function createGrid (size = 0) {
   if (size > 100) {
@@ -26,4 +27,11 @@ function changeColorCell (aCell) {
   aCell.classList.add("colored-cell");
 }
 
-createGrid(50);
+function clear () {
+  containerDiv.innerHTML = ``;
+}
+
+setGridBtn.addEventListener("click",() => {
+  clear();
+  createGrid(prompt("Enter the size per side of the grid"));
+});

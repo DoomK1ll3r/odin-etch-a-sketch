@@ -1,0 +1,49 @@
+:root {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    font-family: "Roboto";
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#container {
+    height: 100vh;
+    width: 100vh;
+    min-width: 500px;
+    min-height: 500px;
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column;
+}
+
+.row-div {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.cell-div {
+    border: solid 1px lightgray;
+    flex: 1;
+}
+
+.colored-cell {
+    background-color: black;
+}
+
+#set-grid {
+    margin: 2rem 0;
+    padding: 0.7rem 2.5rem;
+    font-size: 1.8rem;
+}
